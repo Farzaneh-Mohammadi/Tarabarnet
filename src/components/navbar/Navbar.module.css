@@ -1,0 +1,28 @@
+.navbarContainer {
+  background-color: rgb(74, 133, 135);
+  padding: 1.5rem 0;
+}
+
+.navItems {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+}
+
+li {
+  list-style: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbarContainer {
+    padding: 1rem 0;
+  }
+
+  .navItems {
+    width: 70%;
+    font-size: 16px;
+  }
+}
