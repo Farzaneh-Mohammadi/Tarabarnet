@@ -1,8 +1,10 @@
 import React from "react";
-import styles from "./ProductCards.module.css";
 import { Link } from "react-router-dom";
-import { deleteProducts } from "../../features/products/productSlice";
 import { useDispatch } from "react-redux";
+
+import { deleteProducts } from "../../features/products/productSlice";
+import styles from "./ProductCards.module.css";
+
 
 const ProductCards = (props) => {
   const { data } = props;

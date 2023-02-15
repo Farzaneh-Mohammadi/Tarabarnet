@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+
 import ProductList from "./../../components/products/ProductList";
-import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
 import { fetchAsyncProducts } from "../../features/products/productSlice";
 
 const HomePage = () => {
@@ -13,7 +13,6 @@ const HomePage = () => {
 
   return (
     <div>
-      {/* HomePage */}
       <ProductList />
     </div>
   );
