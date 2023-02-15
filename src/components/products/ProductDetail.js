@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import {
@@ -12,14 +12,17 @@ const ProductDetail = () => {
   const { productId } = useParams();
   const dispatch = useDispatch();
   const data = useSelector(getSelectedProduct);
-  console.log("dataaaa:", data);
 
   useEffect(() => {
     dispatch(fetchAsyncDetails(productId));
   }, [dispatch, productId]);
 
   return (
+    <div>
     <div className={styles.productDetailContainer}>
+            <div className={styles.productDetailImg}>
+        <img src={data.image} alt={data.title} />
+      </div>
       <div className={styles.productDetailInfo}>
         <p>
           <b>Title: </b>
@@ -41,9 +44,11 @@ const ProductDetail = () => {
           {data.price}
         </p>
       </div>
-      <div className={styles.productDetailImg}>
-        <img src={data.image} alt={data.title} />
-      </div>
+    </div>
+  
+  <div className={styles.backLink}>
+            <Link to="/" style={{textDecoration: "underline", fontSize: "18px", marginTop:"1rem" }}>Back to Products Page</Link>
+            </div>
     </div>
   );
 };

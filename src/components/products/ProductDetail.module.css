@@ -22,3 +22,27 @@
   text-align: left;
   width: 65%;
 }
+
+.backLink{
+  text-decoration: "underline";
+  font-size: "25px";
+  margin:"1rem 0";
+  padding-bottom: 3rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .productDetailContainer {
+    flex-direction: column;
+  }
+
+  .productDetailImg {
+    width:80%;
+  }
+
+  .productDetailInfo {
+    margin-top: 2rem;
+    text-align: left;
+    width: 80%;
+  }
+}
